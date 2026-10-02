@@ -1,3 +1,5 @@
+//error class of node js
+
 class ApiError extends Error {
     constructor(
         statusCode,
@@ -18,8 +20,6 @@ class ApiError extends Error {
         } else {
             Error.captureStackTrace(this, this.constructor)
         }
-
-
     }
 }
 
