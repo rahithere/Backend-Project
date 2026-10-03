@@ -1,0 +1,4 @@
+name: videotube
+values:
+  - key: server
+    value: ''
