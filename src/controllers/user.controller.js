@@ -8,11 +8,14 @@ import { ApiResponse } from "../utils/ApiResponse.js"
 //generate access and refresh token for mutiple use
 const generateAccessAndRefreshTokens = async (userId) => {
     try {
+
         const user = await User.findById(userId)
         const accessToken = user.generateAccessToken()
         const refreshToken = user.generateRefreshToken()
-
+        // const refreshToken = "hi"
         user.refreshToken = refreshToken
+
+
         await user.save({ validateBeforeSave: false })
 
         return { accessToken, refreshToken }
@@ -114,7 +117,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const { email, username, password } = req.body
 
-    if (!username || !email) {
+    if (!username && !email) {
         throw new ApiError(400, "username or email is required")
     }
 

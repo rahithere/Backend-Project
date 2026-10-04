@@ -1,0 +1,40 @@
+$kind: http-request
+description: ""
+url: "{{server}}/users/login"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: fullName
+      value: rahit
+      description: ""
+      disabled: false
+    - type: text
+      key: email
+      value: imrahitpal@gmail.com
+      description: ""
+      disabled: false
+    - type: text
+      key: username
+      value: r4hitfr
+      description: ""
+      disabled: false
+    - type: text
+      key: password
+      value: "12345678"
+      description: ""
+      disabled: false
+    - type: file
+      key: avatar
+      src:
+        - /C:/Users/rahit_anrmtbz/Desktop/rahit/photos/p1.jpg
+      description: ""
+      disabled: false
+    - type: file
+      key: coverImage
+      src:
+        - /C:/Users/rahit_anrmtbz/Desktop/rahit/photos/linkedin.png
+      description: ""
+      disabled: false
+order: 2570159410100730
